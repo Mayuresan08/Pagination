@@ -26,7 +26,7 @@
         width:100%;
         height:5rem;
     }
-    .buttons{
+    #buttons{
         position: absolute;
         top:80%;
         left:35%;
@@ -50,16 +50,24 @@
     }
 </style>
 <body onload="setData()">
-  <div class=outerContainer>
+ 
+ 
+    <div class=outerContainer>
     <div class=innerContainer>
-    
-       
-      
-    </div>
-  </div>
-   
-       <div class=buttons>
-          <button onclick="previousPage()">Previous</button>
+       </div>
+       </div>
+        <div id=buttons>
+       </div>
+         <div class="number">
+           <p id="para"> </p>
+        </div>
+
+
+        
+     <script>
+     buttons=document.querySelector("#buttons")
+     buttons.innerHTML=`
+     <button onclick="previousPage()">Previous</button>
           <button id="b1" class=active onclick="showPage(1)">1</button>
           <button id=b2 onclick="showPage(2)">2</button>
           <button id=b3 onclick="showPage(3)">3</button>
@@ -70,12 +78,8 @@
           <button id=b8 onclick="showPage(8)">8</button>
           <button id=b9 onclick="showPage(9)">9</button>
           <button id=b10 onclick="showPage(10)">10</button>
-          <button  onclick="nextPage()" >next</button>
-       </div>
-       <div class="number">
-           <p id="para"> </p>
-       </div>
-     <script>
+          <button  onclick="nextPage()" >next</button>`
+
          let a=[]
          let pageNo=1;
          function setData(){
