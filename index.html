@@ -26,7 +26,7 @@
         width:100%;
         height:5rem;
     }
-    #buttons{
+    .buttons{
         position: absolute;
         top:80%;
         left:35%;
@@ -50,22 +50,18 @@
     }
 </style>
 <body onload="setData()">
- 
- 
-    <div class=outerContainer>
+  <div class=outerContainer>
     <div class=innerContainer>
+    </div>
+  </div>
+   
+       <div class=buttons>
        </div>
-       </div>
-        <div id=buttons>
-       </div>
-         <div class="number">
+       <div class="number">
            <p id="para"> </p>
-        </div>
-
-
-        
+       </div>
      <script>
-     buttons=document.querySelector("#buttons")
+     buttons=document.querySelector(".buttons")
      buttons.innerHTML=`
      <button onclick="previousPage()">Previous</button>
           <button id="b1" class=active onclick="showPage(1)">1</button>
